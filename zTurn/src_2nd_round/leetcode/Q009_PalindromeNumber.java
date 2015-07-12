@@ -13,7 +13,7 @@ public class Q009_PalindromeNumber {
 				return true;
 
 			int digits = 1;
-			while (x / digits >= 10)
+			while (x / digits >= 10) //<<<<<<<<<<<<<<<<<<< condition!!!!!
 				digits = digits * 10;
 
 			while (x > 0) {
