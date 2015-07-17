@@ -12,38 +12,36 @@ package leetcode;
  Given n will always be valid.
  Try to do this in one pass.
 
+ http://www.cnblogs.com/springfor/p/3862219.html
+ http://blog.csdn.net/linhuanmars/article/details/19778441
+ http://fisherlei.blogspot.com/2012/12/leetcode-remove-nth-node-from-end-of.html
 
  */
 public class Q019_RemoveNthNodeFromEndOfList {
+
 	public class Solution {
 		public ListNode removeNthFromEnd(ListNode head, int n) {
 			if (head == null)
 				return head;
 
-			int len = 0;
-			ListNode dummy = new ListNode(-1);
-			dummy.next = head;
+			ListNode original = head;
+			ListNode fastRunner = head;
+			ListNode slowRunner = head;
 
-			ListNode runner = null;
+			for (int i = 0; i < n; i++)
+				fastRunner = fastRunner.next;
 
-			while (dummy.next != null) {
-				if (len == n)
-					runner = dummy;
-				dummy = dummy.next;
-				len++;
+			if (fastRunner == null)
+				return head.next;
+
+			while (fastRunner.next != null) {
+				fastRunner = fastRunner.next;
+				slowRunner = slowRunner.next;
 			}
 
-			if (len < n || runner == null)
-				return head;
-			
-			dummy = new ListNode(-1);
-			dummy.next = head;
-			
-			while(n > 0){
-				runner = runner.next;
-			}
-			
-			return null;
+			slowRunner.next = slowRunner.next.next;
+
+			return original;
 		}
 	}
 }
