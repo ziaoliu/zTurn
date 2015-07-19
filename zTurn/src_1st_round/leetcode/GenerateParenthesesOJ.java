@@ -25,7 +25,7 @@ public class GenerateParenthesesOJ {
 		System.out.println(end - start);
 	}
 
-	public class Solution2 {
+	public class Solution2_TLE {
 		public List<String> generateParenthesis(int n) {
 			ArrayList<String> result = new ArrayList<String>();
 			if (n <= 0) {
