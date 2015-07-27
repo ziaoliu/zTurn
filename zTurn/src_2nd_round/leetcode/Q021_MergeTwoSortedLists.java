@@ -2,7 +2,10 @@ package leetcode;
 
 /*
  Merge two sorted linked lists and return it as a new list. 
- The new list should be made by splicing together the nodes of the first two lists.
+ The new list should be made by splicing together the nodes of the first two lists. 
+
+ http://fisherlei.blogspot.com/2013/03/leetcode-merge-two-sorted-lists-solution.html
+
  */
 public class Q021_MergeTwoSortedLists {
 	public class Solution {
