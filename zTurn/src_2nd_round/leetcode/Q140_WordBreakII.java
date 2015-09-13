@@ -14,6 +14,8 @@ import java.util.Set;
  dict = ["cat", "cats", "and", "sand", "dog"].
 
  A solution is ["cats and dog", "cat sand dog"].
+
+ http://www.shuatiblog.com/blog/2014/06/02/Word-Break-II/
  */
 public class Q140_WordBreakII {
 	public class Solution {
