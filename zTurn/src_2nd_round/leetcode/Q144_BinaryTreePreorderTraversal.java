@@ -41,7 +41,8 @@ public class Q144_BinaryTreePreorderTraversal {
 			stack.push(root);
 			while (stack.size() > 0) {
 				TreeNode node = stack.pop();
-				result.add(node.val);
+				if (node.left == null && node.right == null)
+					result.add(node.val);
 				if (node.right != null)
 					stack.push(node.right);
 				if (node.left != null)
